@@ -219,6 +219,12 @@ img {
 .home__blob-img {
   width: 360px;
 }
+.home_description {
+  font-size: 1rem; /* Adjust this to be smaller than the home_title font size */
+  color: #000; /* Black font color */
+  margin: var(--mb-4); /* Optional margin */
+  line-height: 1.5; /* Optional line-height for readability */
+}
 
 /*BUTTONS*/
 .button {
