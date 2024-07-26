@@ -239,6 +239,24 @@ img {
 .button:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
+.open-about-btn {
+    background-color: var(--first-color);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Optional: Add hover effect */
+.open-about-btn:hover {
+    box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+}
 
 /* ===== ABOUT =====*/
 .about__container {
