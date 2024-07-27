@@ -9,7 +9,7 @@
   /* HSL color mode */
   --hue-color: 123;
   --first-color: hsl(var(--hue-color), 60%, 39%);
-  --second-color: 0x000000;
+  --second-color: hsl(var(--hue-color), 0%, 0%);
   /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
@@ -400,7 +400,7 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: 0x000000;
+  background-color: var(--second-color);
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
