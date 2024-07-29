@@ -556,9 +556,9 @@ img {
   align-items: start;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .about-page__intro {
-    grid-template-columns: 1fr 1fr; /* Set to two columns at 992px and above */
+    grid-template-columns: 1fr 1fr; /* Set to two columns at 768px and above */
   }
 }
 
@@ -610,7 +610,6 @@ img {
 }
 
 .about-page__resume-button {
-  display: inline-block;
   background-color: var(--first-color);
   color: #fff;
   padding: 0.75rem 2.5rem;
@@ -620,7 +619,7 @@ img {
   text-align: center;
   text-decoration: none;
   margin: 0 auto; /* Center the button */
-  display: block; /* Make the button a block element to center it */
+  display: inline-block; /* Adjust display to inline-block to keep button size regular */
 }
 
 .about-page__resume-button:hover {
