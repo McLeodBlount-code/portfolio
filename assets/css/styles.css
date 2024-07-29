@@ -545,7 +545,7 @@ img {
 .about-page {
   display: flex;
   flex-direction: column;
-  margin-top: calc(var(--header-height) + 2rem); /* Increase margin to create a bigger gap */
+  margin-top: calc(var(--header-height) + 2rem); /* Increased gap from the header */
   padding: 2rem var(--mb-2);
 }
 
@@ -554,11 +554,12 @@ img {
   grid-template-columns: 1fr;
   gap: 2rem;
   align-items: start;
+  margin-bottom: 3rem; /* Gap between the intro section and the extensive area */
 }
 
 @media screen and (min-width: 768px) {
   .about-page__intro {
-    grid-template-columns: 1fr 1fr; /* Set to two columns at 768px and above */
+    grid-template-columns: 1fr 1fr; /* Two columns for screens 768px and above */
   }
 }
 
@@ -572,23 +573,22 @@ img {
   width: 100%;
   max-width: 300px;
   border-radius: 0.5rem;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  box-shadow: none; /* Removed shadow for a cleaner look */
 }
 
 .about-page__brief-blurb {
   font-size: var(--normal-font-size);
   line-height: 1.6;
   color: var(--second-color);
-  padding: 1rem;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
-  border-radius: 0.5rem;
-  background-color: #fff;
-  margin-bottom: 3rem; /* Increase margin to create a bigger gap */
+  padding: 1rem 0;
+  margin-bottom: 2rem; /* Gap between the blurb and the extensive area */
+  background-color: transparent; /* Remove background highlight */
+  box-shadow: none; /* Remove box shadow */
 }
 
 /* Invisible divide (using padding for space) */
 .about-page__divider {
-  padding: 3rem 0; /* Increase padding for a bigger gap */
+  padding: 2rem 0; /* Standard space before extensive area */
 }
 
 /* Extensive area */
@@ -618,8 +618,8 @@ img {
   transition: 0.3s;
   text-align: center;
   text-decoration: none;
-  margin: 0 auto; /* Center the button */
-  display: inline-block; /* Adjust display to inline-block to keep button size regular */
+  display: inline-block;
+  margin: 0 auto; /* Center the button horizontally */
 }
 
 .about-page__resume-button:hover {
