@@ -545,7 +545,7 @@ img {
 .about-page {
   display: flex;
   flex-direction: column;
-  margin-top: var(--header-height);
+  margin-top: calc(var(--header-height) + 2rem); /* Increase margin to create a bigger gap */
   padding: 2rem var(--mb-2);
 }
 
@@ -553,12 +553,12 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  align-items: center;
+  align-items: start;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .about-page__intro {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Set to two columns at 992px and above */
   }
 }
 
@@ -583,11 +583,12 @@ img {
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
   border-radius: 0.5rem;
   background-color: #fff;
+  margin-bottom: 3rem; /* Increase margin to create a bigger gap */
 }
 
 /* Invisible divide (using padding for space) */
 .about-page__divider {
-  padding: 2rem 0;
+  padding: 3rem 0; /* Increase padding for a bigger gap */
 }
 
 /* Extensive area */
@@ -618,6 +619,8 @@ img {
   transition: 0.3s;
   text-align: center;
   text-decoration: none;
+  margin: 0 auto; /* Center the button */
+  display: block; /* Make the button a block element to center it */
 }
 
 .about-page__resume-button:hover {
