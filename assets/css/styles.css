@@ -557,7 +557,7 @@ img {
   margin-bottom: 3rem; /* Gap between the intro section and the extensive area */
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 650px) {
   .about-page__intro {
     grid-template-columns: 1fr 1fr; /* Two columns for screens 720px and above */
   }
