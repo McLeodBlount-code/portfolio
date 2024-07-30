@@ -562,6 +562,7 @@ img {
 @media screen and (min-width: 650px) {
   .about-page__intro {
     grid-template-columns: 1fr 1fr; /* Two columns for screens 650px and above */
+    align-items: center; /* Vertically center content in each column */
   }
 }
 
