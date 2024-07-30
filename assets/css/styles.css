@@ -541,11 +541,10 @@ img {
   }
 }
 
-/* ===== ABOUT PAGE ===== */
 .about-page {
   display: flex;
   flex-direction: column;
-  margin-top: calc(var(--header-height) + 2rem); /* Increased gap from the header */
+  margin-top: calc(var(--header-height) + 2rem);
   padding: 2rem var(--mb-2);
 }
 
@@ -554,7 +553,7 @@ img {
   grid-template-columns: 1fr;
   gap: 2rem;
   align-items: start;
-  margin-bottom: 3rem; /* Gap between the intro section and the extensive area */
+  margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 650px) {
@@ -564,6 +563,7 @@ img {
 }
 
 .about-page__main-image {
+  grid-column: 1 / 2; /* Ensure the image takes the left column */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -573,27 +573,28 @@ img {
   width: 100%;
   max-width: 300px;
   border-radius: 0.5rem;
-  box-shadow: none; /* Removed shadow for a cleaner look */
 }
 
 .about-page__brief-blurb {
+  grid-column: 2 / 3; /* Ensure the blurb takes the right column */
   font-size: var(--normal-font-size);
   line-height: 1.6;
   color: var(--second-color);
   padding: 1rem 0;
-  margin-bottom: 2rem; /* Gap between the blurb and the extensive area */
-  background-color: transparent; /* Remove background highlight */
-  box-shadow: none; /* Remove box shadow */
+  background-color: transparent;
 }
 
-/* Invisible divide (using padding for space) */
-.about-page__divider {
-  padding: 2rem 0; /* Standard space before extensive area */
-}
-
-/* Extensive area */
 .about-page__extensive-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   margin-top: var(--mb-4);
+}
+
+@media screen and (min-width: 650px) {
+  .about-page__extensive-area {
+    grid-template-columns: 1fr 1fr; /* Two columns for the extensive area */
+  }
 }
 
 .about-page__section-title {
@@ -611,8 +612,8 @@ img {
 
 .about-page__resume-button-container {
   display: flex;
-  justify-content: center; /* Center the button horizontally */
-  margin: 2rem 0; /* Adjust margin as needed */
+  justify-content: center;
+  margin: 2rem 0;
 }
 
 .about-page__resume-button {
@@ -630,4 +631,3 @@ img {
 .about-page__resume-button:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
-
