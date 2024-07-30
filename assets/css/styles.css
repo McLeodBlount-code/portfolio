@@ -617,7 +617,9 @@ img {
 .about-page__resume-button-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 2rem 0;
+  width: 100%;
 }
 
 .about-page__resume-button {
