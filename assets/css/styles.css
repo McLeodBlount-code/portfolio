@@ -563,6 +563,8 @@ img {
   .about-page__intro {
     grid-template-columns: 1fr 1fr; /* Two columns for screens 650px and above */
     align-items: center; /* Vertically center content in each column */
+    padding-left: 2rem; /* Add padding to the left and right */
+    padding-right: 2rem;
   }
 }
 
@@ -594,6 +596,8 @@ img {
 @media screen and (min-width: 650px) {
   .about-page__extensive-area {
     grid-template-columns: 1fr 1fr; /* Two columns for the extensive area */
+    padding-left: 2rem; /* Add padding to the left and right */
+    padding-right: 2rem;
   }
 }
 
