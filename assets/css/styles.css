@@ -559,7 +559,7 @@ img {
 
 @media screen and (min-width: 650px) {
   .about-page__intro {
-    grid-template-columns: 1fr 1fr; /* Two columns for screens 720px and above */
+    grid-template-columns: 1fr 1fr; /* Two columns for screens 650px and above */
   }
 }
 
@@ -609,6 +609,12 @@ img {
   margin-bottom: var(--mb-5);
 }
 
+.about-page__resume-button-container {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  margin: 2rem 0; /* Adjust margin as needed */
+}
+
 .about-page__resume-button {
   background-color: var(--first-color);
   color: #fff;
@@ -619,9 +625,9 @@ img {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 0 auto; /* Center the button horizontally */
 }
 
 .about-page__resume-button:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
+
