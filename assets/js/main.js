@@ -26,15 +26,8 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 const navLinks = document.querySelectorAll('.nav__menu a');
 
 const setActiveLink = () => {
-  const currentPath = window.location.pathname;
-
   navLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
-    const sectionId = linkHref.split('#')[1]; // Extract the section identifier from the href
-    
-    // If on the home page and the link is for the home section
-    if ((currentPath === '/' && linkHref === '#home') ||
-        (currentPath.includes(sectionId) && sectionId)) {
+    if (link.classList.contains('active-link')) {
       link.classList.add('active-link');
     } else {
       link.classList.remove('active-link');
@@ -45,15 +38,6 @@ const setActiveLink = () => {
 // Call setActiveLink on page load
 window.addEventListener('DOMContentLoaded', setActiveLink);
 
-// Optionally, call setActiveLink on history navigation for SPAs
-window.addEventListener('popstate', setActiveLink);
-
-
-// Call setActiveLink on page load
-window.addEventListener('DOMContentLoaded', setActiveLink);
-
-// Optionally, call setActiveLink on history navigation for SPAs
-window.addEventListener('popstate', setActiveLink);
 
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
