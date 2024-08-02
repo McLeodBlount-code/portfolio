@@ -542,7 +542,7 @@ img {
 }
 
 
-/*about page*/
+/* About page */
 .about-page {
   display: flex;
   flex-direction: column;
@@ -552,7 +552,7 @@ img {
 
 .about-page__intro {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* Default to one column */
   gap: 2rem;
   align-items: start;
   margin-bottom: 3rem;
@@ -561,8 +561,8 @@ img {
 @media screen and (min-width: 650px) {
   .about-page__intro {
     grid-template-columns: 1fr 1fr; /* Two columns for screens 650px and above */
-    align-items: center; /* Vertically center content in each column */
-    padding-left: 10%; /* Responsive padding */
+    align-items: center;
+    padding-left: 10%;
     padding-right: 10%;
   }
 }
@@ -577,7 +577,6 @@ img {
   width: 100%;
   max-width: 300px;
   border-radius: 0.5rem;
-  /* Remove animations */
   transition: none;
 }
 
@@ -586,20 +585,19 @@ img {
   font-size: var(--normal-font-size);
   line-height: 1.6;
   color: var(--second-color);
-  /* Remove animations */
   transition: none;
 }
 
 .about-page__extensive-area {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* Default to one column */
   gap: 2rem;
 }
 
 @media screen and (min-width: 650px) {
   .about-page__extensive-area {
-    grid-template-columns: 1fr 1fr; /* Two columns for the extensive area */
-    padding-left: 10%; /* Responsive padding */
+    grid-template-columns: 1fr 1fr; /* Two columns for the extensive area on larger screens */
+    padding-left: 10%;
     padding-right: 10%;
   }
 }
@@ -622,8 +620,8 @@ img {
   justify-content: center;
   align-items: center;
   margin: 2rem 0;
-  width: 100%; /* Ensure the container takes the full width of the page */
-  grid-column: span 2; /* Span both columns in grid layout */
+  width: 100%;
+  grid-column: span 2;
 }
 
 .about-page__resume-button {
