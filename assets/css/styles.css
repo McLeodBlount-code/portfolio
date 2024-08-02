@@ -578,6 +578,7 @@ img {
   max-width: 300px;
   border-radius: 0.5rem;
   transition: none; /* Remove animations */
+   animation: none !important;
 }
 
 .about__text {
