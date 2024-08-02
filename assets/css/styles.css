@@ -664,9 +664,11 @@ img {
 }
 
 .portfolio-loading-page__image {
-  max-width: 100%;
-  height: auto;
+  width: 300px; /* Set a specific width */
+  height: 200px; /* Set a specific height */
+  object-fit: cover; /* Adjusts the image to cover the container while maintaining aspect ratio */
   margin-bottom: var(--mb-4);
+  border-radius: 0.5rem; /* Optional: adds rounded corners */
 }
 
 .portfolio-loading-page__title {
