@@ -541,7 +541,6 @@ img {
   }
 }
 
-
 /* About page */
 .about-page {
   display: flex;
@@ -577,15 +576,14 @@ img {
   width: 100%;
   max-width: 300px;
   border-radius: 0.5rem;
-  transition: none;
+  transition: none; /* Remove animations */
 }
 
-.about__subtitle,
 .about__text {
   font-size: var(--normal-font-size);
   line-height: 1.6;
   color: var(--second-color);
-  transition: none;
+  transition: none; /* Remove animations */
 }
 
 .about-page__extensive-area {
@@ -621,7 +619,6 @@ img {
   align-items: center;
   margin: 2rem 0;
   width: 100%;
-  grid-column: span 2;
 }
 
 .about-page__resume-button {
