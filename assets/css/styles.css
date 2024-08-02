@@ -195,7 +195,7 @@ img {
 }
 
 /*Active menu*/
-/* Define the appearance of the active link */
+/* Style for the active navigation link */
 .active-link::after {
   position: absolute;
   content: "";
@@ -205,7 +205,6 @@ img {
   top: 2rem;
   background-color: var(--first-color);
 }
-
 
 /*=== Show menu ===*/
 .show {
