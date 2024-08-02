@@ -567,13 +567,13 @@ img {
   }
 }
 
-.about__img {
+.about_page_img {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.about__img img {
+.about_page_img img {
   width: 100%;
   max-width: 300px;
   border-radius: 0.5rem;
