@@ -22,25 +22,29 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
+// Get all the navigation links
+const navLinks = document.querySelectorAll('.nav__menu a');
 
-const scrollActive = () =>{
-    const scrollDown = window.scrollY
+const setActiveLink = () => {
+  const currentPath = window.location.pathname;
 
-  sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id'),
-              sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-        
-        if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-            sectionsClass.classList.add('active-link')
-        }else{
-            sectionsClass.classList.remove('active-link')
-        }                                                    
-    })
-}
-window.addEventListener('scroll', scrollActive)
+  navLinks.forEach(link => {
+    const sectionId = link.getAttribute('href').split('#')[1]; // Assuming href format is '#sectionId'
+    const targetSection = document.getElementById(sectionId);
+    
+    if (targetSection && currentPath.includes(sectionId)) {
+      link.classList.add('active-link');
+    } else {
+      link.classList.remove('active-link');
+    }
+  });
+};
+
+// Call setActiveLink on page load
+window.addEventListener('DOMContentLoaded', setActiveLink);
+
+// Optionally, call setActiveLink on history navigation for SPAs
+window.addEventListener('popstate', setActiveLink);
 
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
