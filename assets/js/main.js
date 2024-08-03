@@ -1,25 +1,42 @@
 /*===== MENU SHOW =====*/ 
-const showMenu = (toggleId, navId) =>{
+const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+          nav = document.getElementById(navId);
 
     if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+    }
+};
+showMenu('nav-toggle','nav-menu');
+
+/*===== DROPDOWN MENU TOGGLE =====*/
+const dropdownToggle = document.querySelectorAll('.nav__item--dropdown');
+
+dropdownToggle.forEach(dropdown => {
+    const link = dropdown.querySelector('.nav__link');
+
+    link.addEventListener('click', (e) => {
+        // Prevent default action and allow dropdown to toggle on click
+        e.preventDefault();
+        dropdown.classList.toggle('active');
+    });
+});
+
+/*===== REMOVE MENU MOBILE =====*/
+const navLink = document.querySelectorAll('.nav__link');
+
+function linkAction() {
+    const navMenu = document.getElementById('nav-menu');
+    // When a nav__link without a dropdown is clicked, remove the show class
+    if (!this.parentElement.classList.contains('nav__item--dropdown')) {
+        navMenu.classList.remove('show');
     }
 }
-showMenu('nav-toggle','nav-menu')
 
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
-
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
+// Add event listeners to nav links
+navLink.forEach(n => n.addEventListener('click', linkAction));
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 // Get all the navigation links
