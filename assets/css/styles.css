@@ -710,6 +710,7 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem var(--mb-2);
+  margin-top: calc(var(--header-height) + 2rem);
 }
 
 .return-button {
@@ -732,7 +733,7 @@ img {
 .project-title {
   text-align: center;
   font-size: var(--big-font-size);
-  color: var(--first-color);
+  color: var(--second-color);
   margin-bottom: var(--mb-4);
 }
 
@@ -753,7 +754,7 @@ img {
 
 .tldr-title {
   font-size: var(--h2-font-size);
-  color: var(--first-color);
+  color: var(--second-color);
   margin-bottom: var(--mb-2);
   text-align: center;
 }
