@@ -720,6 +720,7 @@ img {
   background-color: var(--first-color);
   color: #fff;
   padding: 0.5rem 1rem;
+  margin-top: calc(var(--header-height) + 2rem);
   font-weight: var(--font-semi);
   border-radius: 0.25rem;
   text-decoration: none;
