@@ -632,7 +632,7 @@ img {
    animation: none !important;
 }
 
-.about__text {
+.about_page_text {
   font-size: var(--normal-font-size);
   line-height: 1.6;
   color: var(--second-color);
