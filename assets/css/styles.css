@@ -755,7 +755,7 @@ img {
 
 .return-button {
   position: absolute;
-  top: calc((var(--header-height) + 2rem)*2);
+  top: calc((var(--header-height) + 2rem)*1.25);
   left: var(--mb-2);
   background-color: var(--first-color);
   color: #fff;
