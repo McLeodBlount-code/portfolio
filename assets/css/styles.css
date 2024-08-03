@@ -203,7 +203,7 @@ img {
 }
 
 .nav__item--dropdown:hover .nav__link,
-.nav__dropdown-menu:hover .nav__link {
+.nav__item--dropdown:focus-within .nav__link {
   background-color: #e0e0e0; /* Tint color for "Projects" and dropdown */
   border-radius: 0.25rem;
 }
@@ -211,9 +211,9 @@ img {
 .nav__dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 0.5rem); /* Ensure some space below the "Projects" link */
+  top: 100%; /* Directly below the nav item */
   left: 50%;
-  transform: translateX(-50%); /* Center the dropdown below the link */
+  transform: translateX(-50%);
   background-color: #f9f9f9; /* Light background for dropdown */
   padding: 0.5rem 0;
   list-style: none;
@@ -243,7 +243,7 @@ img {
 }
 
 .nav__item--dropdown:hover .nav__dropdown-menu,
-.nav__dropdown-menu:hover {
+.nav__item--dropdown:focus-within .nav__dropdown-menu {
   display: block;
   opacity: 1;
   visibility: visible;
