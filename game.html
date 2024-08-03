@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -35,7 +36,44 @@
             </nav>
         </header>
 
+         <main class="individual-project" id="projects">
+        <a href="projects.html" class="return-button">← Back</a>
 
+        <h1 class="project-title">Moisture Sensor</h1>
+
+        <p class="project-description">
+            A digital sensor to track a plant's health, and alert you when it needs more water.
+        </p>
+
+        <section class="tldr-section">
+            <h2 class="tldr-title">TLDR</h2>
+            <p class="tldr-content">
+                What I learned:
+            </p>
+            <ul>
+                <li>Breadboard design</li>
+                <li>KiCAD PCB design </li>
+                <li>PCB Schematic debugging</li>
+                <li>Practical design</li>
+          </ul>
+        </section>
+
+        <section class="project-content">
+            <img src="assets/img/3D.jpg" alt="Project Image 1">
+            <p>During my first year studying at Georgia Tech, I was encouraged to learn about and engage with the various resources provided to me while in school. The most intriguing of these resources was the HIVE, an electrically focused makerspace located in the heart of campus. With free access to workbenches, circuit parts, and even more advanced machinery such as plasma cutters and PCB fabricators, when a student visits the HIVE, their ideas are only limited by their determination and ability to learn.</p>
+            <img src="assets/img/MS-1.jpg" alt="Project Image 1">
+            <p>When I first visited the HIVE, I was overwhelmed with the scope of the space. As a student who had not yet taken an electrical engineering focused lab, breadboards, resistors, and even basic wiring were not things I understood, but I was determined to end the semester with a complete project and grasp of the future I planned to pursue in engineering.<br>When choosing what to build, I wanted something practical that I could use in my day-to-day life. When looking around my dorm room for inspiration, a dying succulent caught my eye. Throughout the semester, watering had fallen far down my to-do list, and the plant was suffering because of it. So, I decided to create a machine to alert me when the plant needed more water. </p>
+            <img src="assets/img/MS-2.jpg" alt="Project Image 2">
+            <p>My original plan was simple, attach a premade moisture sensor to the breadboard, and have it turn on a red LED when the moisture level was too low. Immediately, however, I ran into a major problem – the HIVE did not have a moisture sensor. So, my plan became more focused on available resources, and the above design combines available online research with my own personal tweaks.<br>Focused on a QUAD input NAND gate, there are two blue, 100KΩ resistors (located in the top left of the image) which acted as probes into the dirt. One resistor is always powered with 9Vs, while the other is left grounded by 10MΩ of resistance (achieved through several resistors in series as seen at the bottom left of the image). When the probes are inserted in moist dirt, the powered resistor transfers voltage to the other, keeping the LED off, but when the moisture level drops the voltage transfer is not as strong, and eventually impossible, turning the red LED on and alerting the user that the plant should be watered. </p>
+            <img src="assets/img/MS-3.jpg" alt="Project Image 3">
+            <p>After testing and verifying my design, the most glaring shortfall became the size of the breadboard. While it was useful for planning, learning, and assembly, I did not feel that I had accomplished my goal of saving the dying succulent. Furthering my research, I discovered KiCAD and wanted to test myself to build a PCB containing my design.<br>Pictured above is the schematic for this PCB, using a simplified design (simplifying the resistors in parallel to one resistor). Initially I found KiCAD to be very straightforward. I typed in the pieces I needed to use and placed them in a similar shape to the one I designed on the breadboard. Despite watching countless KiCAD tutorials online, when I finished the schematic, I was receiving unexpected power and design errors. I went to HIVE mentors in an attempt to debug, but even they could not find the issues. </p>
+            <img src="assets/img/MS-4.jpg" alt="Project Image 1">
+            <p>It wasn't until I discovered an online forum post with the same issue that I was able to debug the schematic and produce the above blueprint for fabrication. As it turns out, KiCAD did not understand that my resistors were acting as probes, and figured they needed to be connected on both of their respective ends. Adding un-used wiring to both ends solved the issue, and I was able to send the design to be fabricated by an online PCB company. </p>
+            <img src="assets/img/3D.jpg" alt="Project Image 1">
+            <p>This process taught me a wide range of skills, from breadboard construction to PCB design, I was able to hone my skills as electrical engineer. The most important lesson was, however, the one I learned through designing my own motion sensor, rather than using a premade part. While it was more time consuming, my design was unique and uses simple electrical properties to achieve the goal I set out to achieve. If anything, I can rest easy knowing my succulent is happier and healthier today!</p>
+        </section>
+    </main>
+        
         <!--===== FOOTER =====-->
         <footer class="footer">
             <p class="footer__title">McLeod</p>
