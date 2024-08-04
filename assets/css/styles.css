@@ -456,26 +456,30 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--second-color);
-  color: #fff;
+  background-color: #b3b3b3; /* Set to a grey color */
+  color: #fff; /* Keeping the text color white for contrast */
   text-align: center;
   font-weight: var(--font-semi);
-  padding: 2rem 0;
+  padding: 1.5rem 0; /* Reduced padding by 25% */
 }
+
 .footer__title {
-  font-size: 2rem;
-  margin-bottom: var(--mb-4);
+  font-size: 1.5rem; /* Reduced font size by 25% */
+  margin-bottom: var(--mb-3); /* Reduced margin by 25% if var(--mb-4) is 1rem, then var(--mb-3) should be 0.75rem */
 }
+
 .footer__social {
-  margin-bottom: var(--mb-4);
+  margin-bottom: var(--mb-3); /* Reduced margin by 25% */
 }
+
 .footer__icon {
-  font-size: 1.5rem;
+  font-size: 1.125rem; /* Reduced font size by 25% */
   color: #fff;
-  margin: 0 var(--mb-2);
+  margin: 0 var(--mb-1.5); /* Reduced margin by 25% if var(--mb-2) is 0.5rem, then var(--mb-1.5) should be 0.375rem */
 }
+
 .footer__copy {
-  font-size: var(--smaller-font-size);
+  font-size: calc(var(--smaller-font-size) * 0.75); /* Reduced font size by 25% */
 }
 
 /* ===== MEDIA QUERIES=====*/
