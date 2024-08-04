@@ -826,7 +826,9 @@ img {
 }
 
 .project-content img {
-  justify-self: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 75%;
   height: auto;
   margin-bottom: var(--mb-4);
