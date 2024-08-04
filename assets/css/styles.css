@@ -832,7 +832,7 @@ img {
 }
 
 .project-content p {
-  font-size: var(--normal-font-size);
+  font-size: calc((var(--normal-font-size))*1.15);
   line-height: 1.8;
   color: var(--second-color);
   margin-bottom: var(--mb-4);
