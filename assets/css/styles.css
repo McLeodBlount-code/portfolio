@@ -456,11 +456,11 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: #b3b3b3; /* Set to a grey color */
+  background-color: #323232; /* Set to a grey color */
   color: #fff; /* Keeping the text color white for contrast */
   text-align: center;
   font-weight: var(--font-semi);
-  padding: 1.5rem 0; /* Reduced padding by 25% */
+  padding: 1.6rem 0; /* Reduced padding by 25% */
 }
 
 .footer__title {
