@@ -69,3 +69,36 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var formData = new FormData(this);
+    var jsonData = {};
+
+    formData.forEach(function(value, key){
+        jsonData[key] = value;
+    });
+
+    fetch(this.action, {
+      method: 'POST',
+      body: JSON.stringify(jsonData),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.result === 'success') {
+        alert('Message sent successfully!');
+      } else {
+        alert('There was an error sending your message. Please try again.');
+      }
+    })
+    .catch(error => {
+      alert('There was an error sending your message. Please try again.');
+    });
+  });
+</script>
+
